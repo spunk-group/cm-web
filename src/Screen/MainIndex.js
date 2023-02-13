@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Switch, Route, Routes, useNavigate } from 'react-router-dom';
 import { onModalOpen, onChangeDarkMode, onChangeHighcontrast, OnchangeRTLmode } from '../Redux/Actions/Actions';
@@ -59,20 +59,31 @@ import Reward from './Reward/Reward';
 import SecurityPage from './SecurityPage/SecurityPage';
 import Identification from './Identification/Identification';
 import ReferalPage from './ReferalPage/ReferalPage';
+import Nav from '../Component/Comman/Nav';
+import Footer from '../Component/Comman/Footer';
+
 
 function MainIndex(props) {
     const { modalopen, darkMode, highcontrast, rtlmode } = props.Mainreducer;
     const { activekey, GotoChangeMenu } = props;
     const navigate = useNavigate();
     const baseUrl = process.env.PUBLIC_URL;
+    useEffect(() => {
+        localStorage.getItem('darkMode') && props.onChangeDarkMode(localStorage.getItem('darkMode'))
+    }, [])
     return (
-        <div className='main px-lg-4 px-md-4'>
-            {activekey === "/chat" || activekey === "/documentation" ? "" :
+        // <div className='main px-lg-4 px-md-4'>
+        <div className='main'>
+            {/* {activekey === "/chat" || activekey === "/documentation" ? "" :
                 <Header
                     onModalOpen={(val) => { props.onModalOpen(true) }}
                     GotoChangeMenu={(val) => { GotoChangeMenu(val) }}
                 />
-            }
+            } */}
+
+            <Nav
+                onChangeDarkMode={(val) => { props.onChangeDarkMode(darkMode === 'dark' ? 'light' : 'dark') }}
+            />
             <NewModal
                 show={modalopen}
                 highcontrast={highcontrast}
@@ -82,7 +93,7 @@ function MainIndex(props) {
                 onChangeHighcontrast={() => { props.onChangeHighcontrast(highcontrast === 'high-contrast' ? 'light' : 'high-contrast') }}
                 OnchangeRTLmode={() => { props.OnchangeRTLmode(rtlmode === 'rtl_mode' ? true : false) }}
             />
-            <div className="body d-flex py-3 ">
+            <div className="body d-flex">
                 <Routes>
                     <Route exact path={baseUrl + '/'} element={<Dashboard />} />
                     <Route exact path={baseUrl + '/exchange'} element={<Exchange />} />
@@ -141,6 +152,7 @@ function MainIndex(props) {
                     <Route exact path={baseUrl + '/ui-toastsui'} element={<ToastsUI />} />
                 </Routes>
             </div>
+            <Footer />
         </div>
     )
 }

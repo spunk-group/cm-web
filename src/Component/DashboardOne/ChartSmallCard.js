@@ -25,11 +25,11 @@ function ChartSmallCard() {
                     </div>
                     {
                         FirstChartData.map((data, i) => {
-                            return <Apex data={data} key={'s'+i}/>
+                            return <Apex data={data} key={'s' + i} />
                         })
                     }
 
-                    
+
                 </div>
             </div>
             <div className="col">
@@ -49,10 +49,10 @@ function ChartSmallCard() {
                             </div>
                         </div>
                     </div>
-                   
+
                     {
                         SecondChartData.map((data, i) => {
-                            return <Apex data={data} key={'a'+i}/>
+                            return <Apex data={data} key={'a' + i} />
                         })
                     }
 
@@ -77,7 +77,7 @@ function ChartSmallCard() {
                     </div>
                     {
                         ThirdChartData.map((data, i) => {
-                            return <Apex data={data} key={'e'+i}/>
+                            return <Apex data={data} key={'e' + i} />
                         })
                     }
                     <div className="resize-triggers"><div className="expand-trigger"><div style={{ width: '247px', height: '132px' }}></div></div><div className="contract-trigger"></div></div></div>
@@ -101,7 +101,7 @@ function ChartSmallCard() {
                     </div>
                     {
                         FourthChartData.map((data, i) => {
-                            return <Apex data={data} key={'f'+i}/>
+                            return <Apex data={data} key={'f' + i} />
                         })
                     }
                     <div className="resize-triggers"><div className="expand-trigger"><div style={{ width: '247px', height: '132px' }}></div></div><div className="contract-trigger"></div></div></div>

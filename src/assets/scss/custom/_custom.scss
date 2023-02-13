@@ -1,0 +1,59 @@
+.rdt_TableRow{
+    color: var(--color-600) !important;
+    background-color: var(--card-color) !important;
+}
+.rdt_TableHeadRow{
+    color: var(--color-600) !important;
+    background-color: var(--card-color) !important;
+}
+
+.rdt_TableRow:hover{
+    background-color: #EEEEEE !important;
+}
+[data-theme="dark"] .rdt_TableRow:hover{
+    background-color: #374450 !important; 
+}
+.color-primary{
+    color: var(--primary-color);
+}
+.banner-card{
+    background-image: url(http://coin-market-e0d42.web.app/CoinMarket_Main_Banners.png);
+    background-size: cover;
+	background-position: center;
+}
+.subscription .section-inner{
+    // background: rgba(11, 11, 11, 0.718);
+	height: 240px;
+    flex-direction: column;
+}
+.nav-link{
+    font-size: 14px !important
+}
+@media only screen and (min-width: 1279px) {
+	.sidebar {
+		position: fixed;
+		left: -400px;
+		height: 100vh;
+		margin: 0px;
+		border-radius: 0px;
+	}
+}
+
+@media only screen and (max-width: 426px) {
+        ::-webkit-scrollbar {
+            width: 4px !important;
+        }
+}
+@media only screen and (max-width: 426px) {
+    .main{
+        overflow-x: hidden;
+    }
+}
+
+.footer {
+        background-color: var(--card-color);
+}
+
+.blur {
+    -webkit-filter: blur(4px);
+}

@@ -1,8 +1,8 @@
 const initialState = {
-    modalopen:false,
-    darkMode:'',
-    highcontrast:'',
-    rtlmode:false
+    modalopen: false,
+    darkMode: '',
+    highcontrast: '',
+    rtlmode: false
 }
 const Mainreducer = (state = initialState, action) => {
     switch (action.type) {
@@ -12,23 +12,24 @@ const Mainreducer = (state = initialState, action) => {
                 modalopen: action.payload
             }
         }
-        case 'DARK_MODE':{
-            return{
+        case 'DARK_MODE': {
+            localStorage.setItem('darkMode', action.payload)
+            return {
                 ...state,
-                darkMode:action.payload
+                darkMode: action.payload
             }
         }
-        case 'HIGH_CONTRAST':{
-         
-            return{
+        case 'HIGH_CONTRAST': {
+
+            return {
                 ...state,
-                highcontrast:action.payload
+                highcontrast: action.payload
             }
         }
-        case 'rtl_mode':{
-            return{
+        case 'rtl_mode': {
+            return {
                 ...state,
-                rtlmode:action.payload
+                rtlmode: action.payload
             }
         }
         default: {

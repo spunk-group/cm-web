@@ -360,10 +360,10 @@ export const OpenOrderData = {
             name: "ACTION",
             selector: (row) => { },
             sortable: true,
-            cell: () =><div className="btn-group" role="group">
-            <button type="button" className="btn btn-outline-secondary"><i className="icofont-edit text-success"></i></button>
-            <button type="button" className="btn btn-outline-secondary deleterow"><i className="icofont-ui-delete text-danger"></i></button>
-        </div>
+            cell: () => <div className="btn-group" role="group">
+                <button type="button" className="btn btn-outline-secondary"><i className="icofont-edit text-success"></i></button>
+                <button type="button" className="btn btn-outline-secondary deleterow"><i className="icofont-ui-delete text-danger"></i></button>
+            </div>
         }
 
     ],
@@ -434,6 +434,87 @@ export const OpenOrderData = {
     ]
 }
 
+export const OrderData = {
+
+    columns: [
+        {
+            name: "Name",
+            selector: (row) => row.name,
+            cell: row => <> <img src={row.image} alt="" className="img-fluid avatar mx-1" />{row.name}</>,
+            sortable: true,
+            minWidth: "150px"
+        },
+        {
+            name: "Last Price",
+            selector: (row) => '$' + row.price,
+            sortable: true
+        },
+        {
+            name: "24h Change",
+            selector: (row) => row.amount,
+            sortable: true
+        },
+        {
+            name: "Market Cap",
+            selector: (row) => '$' + row.price + 'M',
+            sortable: true
+        },
+        {
+            name: "Trade",
+            selector: (row) => row.side,
+            sortable: true
+        },
+    ],
+    rows: [
+        {
+            date: '09-18 17:32:15',
+            name: 'ETH/USDT',
+            image: A1,
+            type: 'Limit',
+            side: 'Buy',
+            price: '2774.00',
+            amount: '0.000378',
+        },
+        {
+            date: '09-20 18:38:15',
+            name: 'SOL/USDT',
+            image: A2,
+            type: 'Limit',
+            side: 'Buy',
+            price: '125.00',
+            amount: '0.005378',
+        },
+        {
+            date: '09-18 17:32:15',
+            name: 'DGD/USDT',
+            image: A3,
+            type: 'Limit',
+            side: 'Sell',
+            price: '35.00',
+            amount: '0.000005',
+        },
+        {
+            date: '09-21 13:32:15',
+            name: 'ADA/USDT',
+            image: A4,
+            type: 'Limit',
+            side: 'Sell',
+            price: '3.500',
+            amount: '0.000001',
+        },
+        {
+            date: '09-21 13:32:15',
+            name: 'BNB/USDT',
+            image: A5,
+            type: 'Limit',
+            side: 'Sell',
+            price: '415.00	',
+            amount: '0.000041',
+        },
+    ]
+}
+
+
 export const OrderHistoryData = {
 
     columns: [
@@ -497,11 +578,11 @@ export const OrderHistoryData = {
             image: B1,
             type: 'Market',
             side: 'Sell',
-            average:'3,487.50',
+            average: '3,487.50',
             price: 'Market',
-            executed:'0.0110',
+            executed: '0.0110',
             amount: '0.0110',
-            total:'38.36'
+            total: '38.36'
         },
         {
             date: '09-18 17:31:11',
@@ -509,11 +590,11 @@ export const OrderHistoryData = {
             image: B2,
             type: 'Market',
             side: 'Sell',
-            average:'160.33',
+            average: '160.33',
             price: 'Market',
-            executed:'0.75',
+            executed: '0.75',
             amount: '0.75',
-            total:'120.25'
+            total: '120.25'
         },
         {
             date: '09-18 08:52:04',
@@ -521,11 +602,11 @@ export const OrderHistoryData = {
             image: B3,
             type: 'Market',
             side: 'Buy',
-            average:'3,439.20',
+            average: '3,439.20',
             price: 'Market',
-            executed:'0.0111',
+            executed: '0.0111',
             amount: '0.0111',
-            total:'38.18'
+            total: '38.18'
         },
         {
             date: '09-17 08:34:14',
@@ -533,13 +614,13 @@ export const OrderHistoryData = {
             image: B4,
             type: 'Market',
             side: 'Buy',
-            average:'147.04',
+            average: '147.04',
             price: 'Market',
-            executed:'0.76',
+            executed: '0.76',
             amount: '0.71',
-            total:'111.75'
+            total: '111.75'
         },
-      
+
     ]
 }
 
@@ -590,16 +671,16 @@ export const TradeHistoryData = {
 
     ],
     rows: [
-       
+
         {
             date: '09-18 17:32:15',
             name: 'ETH/USDT',
             image: C1,
             side: 'Sell',
             price: '3,487.50',
-            executed:'0.0110',
+            executed: '0.0110',
             fee: '0.03836250 USDT',
-            total:'38.36250000 USDT'
+            total: '38.36250000 USDT'
         },
         {
             date: '09-18 17:31:11',
@@ -607,9 +688,9 @@ export const TradeHistoryData = {
             image: C2,
             side: 'Sell',
             price: '160.33',
-            executed:'0.75',
+            executed: '0.75',
             fee: '0.12024750 USDT',
-            total:'120.24750000 USDT'
+            total: '120.24750000 USDT'
         },
         {
             date: '09-18 08:52:04',
@@ -617,9 +698,9 @@ export const TradeHistoryData = {
             image: C3,
             side: 'Buy',
             price: '3,439.20',
-            executed:'0.0111',
+            executed: '0.0111',
             fee: '0.00001110 ETH',
-            total:'38.17512000 USDT'
+            total: '38.17512000 USDT'
         },
         {
             date: '09-17 08:34:14',
@@ -627,11 +708,11 @@ export const TradeHistoryData = {
             image: C4,
             side: 'Buy',
             price: '147.04',
-            executed:'0.76',
+            executed: '0.76',
             fee: '0.00076000 SOL',
-            total:'111.75040000 USDT'
+            total: '111.75040000 USDT'
         },
-      
+
     ]
 }
 export const FunData = {
@@ -642,7 +723,7 @@ export const FunData = {
             selector: (row) => row.name,
             cell: row => <> <img src={row.image} alt="" className="img-fluid avatar mx-1" />{row.name}</>,
             sortable: true,
-           
+
         },
         {
             name: "TOTAL BALANCE",
@@ -667,60 +748,60 @@ export const FunData = {
     ],
     rows: [
         {
-            name:'1INCH',
-            image:D1,
-            total:'10.00000000',
-            availablebalance:'10.00000000	',
-            order:'08.00000000',
-            btcvalue:'0.00000080 BTC'
+            name: '1INCH',
+            image: D1,
+            total: '10.00000000',
+            availablebalance: '10.00000000	',
+            order: '08.00000000',
+            btcvalue: '0.00000080 BTC'
         },
         {
-            name:'EDG',
-            image:D2,
-            total:'11.00000000',
-            availablebalance:'11.00000000',
-            order:'10.00000010',
-            btcvalue:'0.000000010 BTC'
+            name: 'EDG',
+            image: D2,
+            total: '11.00000000',
+            availablebalance: '11.00000000',
+            order: '10.00000010',
+            btcvalue: '0.000000010 BTC'
         },
         {
-            name:'ADA',
-            image:D3,
-            total:'112.00000000',
-            availablebalance:'112.00000000',
-            order:'098.00000098',
-            btcvalue:'0.0000000009 BTC'
+            name: 'ADA',
+            image: D3,
+            total: '112.00000000',
+            availablebalance: '112.00000000',
+            order: '098.00000098',
+            btcvalue: '0.0000000009 BTC'
         },
         {
-            name:'ARK',
-            image:D4,
-            total:'113.00000000',
-            availablebalance:'113.00000000',
-            order:'	097.00000097',
-            btcvalue:'0.0000000009 BTC'
+            name: 'ARK',
+            image: D4,
+            total: '113.00000000',
+            availablebalance: '113.00000000',
+            order: '	097.00000097',
+            btcvalue: '0.0000000009 BTC'
         },
         {
-            name:'Fun',
-            image:D5,
-            total:'218.00000000',
-            availablebalance:'218.00000000',
-            order:'095.00000095',
-            btcvalue:'0.0000000008 BTC'
+            name: 'Fun',
+            image: D5,
+            total: '218.00000000',
+            availablebalance: '218.00000000',
+            order: '095.00000095',
+            btcvalue: '0.0000000008 BTC'
         },
         {
-            name:'BNB',
-            image:D6,
-            total:'0.00431435',
-            availablebalance:'0.00431435',
-            order:'0.00000000',
-            btcvalue:'0.00003445 BTC'
+            name: 'BNB',
+            image: D6,
+            total: '0.00431435',
+            availablebalance: '0.00431435',
+            order: '0.00000000',
+            btcvalue: '0.00003445 BTC'
         },
         {
-            name:'ETH',
-            image:D7,
-            total:'0.05431435',
-            availablebalance:'0.05431435',
-            order:'0.00000000',
-            btcvalue:'0.00543445 BTC'
+            name: 'ETH',
+            image: D7,
+            total: '0.05431435',
+            availablebalance: '0.05431435',
+            order: '0.00000000',
+            btcvalue: '0.00543445 BTC'
         },
     ]
 }

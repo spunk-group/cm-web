@@ -6,8 +6,13 @@ import { Switch, useNavigate, withRouter } from 'react-router-dom';
 import AuthIndex from './Screen/AuthIndex';
 import menu from '../src/Component/Data/Menu/Menu.json';
 import menu2 from '../src/Component/Data/Menu/Menu2.json';
+import NavbarUI from './Screen/Ui Component/Navbar';
+import Nav from './Component/Comman/Nav';
+import { onChangeDarkMode } from './Redux/Actions/Actions';
+
 
 function App(props) {
+  const { darkMode } = props.Mainreducer;
   const [menuData, setMenuData] = useState([...menu.menu]);
   const navigate = useNavigate();
   var baseUrl = process.env.PUBLIC_URL
@@ -23,7 +28,13 @@ function App(props) {
   }
   if (activekey() === '/sign-in' || activekey() === '/sign-up' || activekey() === '/forgot-password' || activekey() === '/verification' || activekey() === '/404page') {
     return (
-      <div id="cryptoon-layout" className='theme-orange'>
+      <div id="cryptoon-layout" className='theme-green'>
+        <Sidebar
+          activekey={activekey()}
+          menuData={menuData}
+          GotoChangeMenu={(val) => { GotoChangeMenu(val) }}
+          onChangeDarkMode={(val) => { props.onChangeDarkMode(darkMode === 'dark' ? 'light' : 'dark') }}
+        />
         <AuthIndex />
       </div>
     );
@@ -48,11 +59,12 @@ function App(props) {
 
   // console.log(activekey())
   return (
-    <div id='cryptoon-layout' className='theme-orange'>
+    <div id='cryptoon-layout' className='theme-green'>
       <Sidebar
         activekey={activekey()}
         menuData={menuData}
         GotoChangeMenu={(val) => { GotoChangeMenu(val) }}
+        onChangeDarkMode={(val) => { props.onChangeDarkMode(darkMode === 'dark' ? 'light' : 'dark') }}
       />
       <MainIndex activekey={activekey()}
         GotoChangeMenu={(val) => { GotoChangeMenu(val) }}
@@ -65,5 +77,5 @@ const mapStateToProps = ({ Mainreducer }) => ({
 })
 
 export default connect(mapStateToProps, {
-
+  onChangeDarkMode,
 })(App);

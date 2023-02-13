@@ -82,7 +82,7 @@ function NewModal(props) {
             document.body.classList.add('font-' + val)
         }
     }
-    const { show, onHide,onChangeDarkMode,onChangeHighcontrast,highcontrast,darkMode,OnchangeRTLmode} = props;
+    const { show, onHide, onChangeDarkMode, onChangeHighcontrast, highcontrast, darkMode, OnchangeRTLmode } = props;
     return (
         <Modal className="modal fade right " id="Settingmodal" show={show} onHide={onHide} >
             <div className="modal-content">
@@ -90,7 +90,7 @@ function NewModal(props) {
                     <h5 className="modal-title">Custome Settings</h5>
                 </Modal.Header>
                 <Modal.Body className="modal-body custom_setting">
-                    <div className="setting-theme pb-3">
+                    {/* <div className="setting-theme pb-3">
                         <h6 className="card-title mb-2 fs-6 d-flex align-items-center"><i className="icofont-color-bucket fs-4 me-2 text-primary"></i>Template Color Settings</h6>
                         <ul className="list-unstyled row row-cols-3 g-2 choose-skin mb-2 mt-2">
                             <li data-theme="indigo" className={Isactivetheme('indigo')}><div className="indigo" onClick={() => { Changetheme('indigo') }}></div></li>
@@ -188,7 +188,7 @@ function NewModal(props) {
                         <ul className="list-group font_setting mt-1">
                             <li className="list-group-item py-1 px-2">
                                 <div className="form-check mb-0">
-                                    <input className="form-check-input" type="radio" name="font" id="font-poppins" value="font-poppins"  onClick={() => { Isfontchange('poppins') }}/>
+                                    <input className="form-check-input" type="radio" name="font" id="font-poppins" value="font-poppins" onClick={() => { Isfontchange('poppins') }} />
                                     <label className="form-check-label" htmlFor="font-poppins">
                                         Poppins Google Font
                                     </label>
@@ -196,7 +196,7 @@ function NewModal(props) {
                             </li>
                             <li className="list-group-item py-1 px-2">
                                 <div className="form-check mb-0">
-                                    <input className="form-check-input" type="radio" name="font" id="font-opensans" value="font-opensans"  onClick={() => { Isfontchange('opensans') }}/>
+                                    <input className="form-check-input" type="radio" name="font" id="font-opensans" value="font-opensans" onClick={() => { Isfontchange('opensans') }} />
                                     <label className="form-check-label" htmlFor="font-opensans">
                                         Open Sans Google Font
                                     </label>
@@ -204,7 +204,7 @@ function NewModal(props) {
                             </li>
                             <li className="list-group-item py-1 px-2">
                                 <div className="form-check mb-0">
-                                    <input className="form-check-input" type="radio" name="font" id="font-montserrat" value="font-montserrat"  onClick={() => { Isfontchange('montserrat') }}/>
+                                    <input className="form-check-input" type="radio" name="font" id="font-montserrat" value="font-montserrat" onClick={() => { Isfontchange('montserrat') }} />
                                     <label className="form-check-label" htmlFor="font-montserrat">
                                         Montserrat Google Font
                                     </label>
@@ -219,28 +219,28 @@ function NewModal(props) {
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                     <div className="setting-mode py-3">
                         <h6 className="card-title mb-2 fs-6 d-flex align-items-center"><i className="icofont-layout fs-4 me-2 text-primary"></i>Contrast Layout</h6>
                         <ul className="list-group list-unstyled mb-0 mt-1">
                             <li className="list-group-item d-flex align-items-center py-1 px-2">
                                 <div className="form-check form-switch theme-switch mb-0">
-                                    <input className="form-check-input" type="checkbox" id="theme-switch" checked={darkMode === 'dark'} onChange={onChangeDarkMode}/>
+                                    <input className="form-check-input" type="checkbox" id="theme-switch" checked={darkMode === 'dark'} onChange={onChangeDarkMode} />
                                     <label className="form-check-label" htmlFor="theme-switch" >Enable Dark Mode!</label>
                                 </div>
                             </li>
-                            <li className="list-group-item d-flex align-items-center py-1 px-2">
+                            {/* <li className="list-group-item d-flex align-items-center py-1 px-2">
                                 <div className="form-check form-switch theme-high-contrast mb-0">
-                                    <input className="form-check-input" type="checkbox" id="theme-high-contrast" checked={highcontrast === 'high-contrast'} onChange={onChangeHighcontrast}/>
+                                    <input className="form-check-input" type="checkbox" id="theme-high-contrast" checked={highcontrast === 'high-contrast'} onChange={onChangeHighcontrast} />
                                     <label className="form-check-label" htmlFor="theme-high-contrast">Enable High Contrast</label>
                                 </div>
                             </li>
                             <li className="list-group-item d-flex align-items-center py-1 px-2">
                                 <div className="form-check form-switch theme-rtl mb-0">
-                                    <input className="form-check-input" type="checkbox" id="theme-rtl" checked={document.body.classList.contains("rtl_mode")} onChange={OnchangeRTLmode}/>
+                                    <input className="form-check-input" type="checkbox" id="theme-rtl" checked={document.body.classList.contains("rtl_mode")} onChange={OnchangeRTLmode} />
                                     <label className="form-check-label" htmlFor="theme-rtl">Enable RTL Mode!</label>
                                 </div>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </Modal.Body>

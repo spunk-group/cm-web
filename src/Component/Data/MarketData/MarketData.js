@@ -23,6 +23,11 @@ import BCH from '../../../assets/images/coin/BCH.png';
 import BNB from '../../../assets/images/coin/BNB.png';
 import BNT from '../../../assets/images/coin/BNT.png';
 import BTC from '../../../assets/images/coin/BTC.png';
+import GEM from '../../../assets/images/ReferPrograms/ReferPrograms-newgems.png';
+import DEO from '../../../assets/images/ReferPrograms/ReferPrograms-deo.png';
+import RAE from '../../../assets/images/ReferPrograms/ReferPrograms-referandearn.png';
+import APR from '../../../assets/images/ReferPrograms/ReferPrograms-stakeandearn.png';
+
 
 
 
@@ -61,6 +66,63 @@ export const marketCardData = [
     }
 ]
 
+export const CardData = [
+    {
+        header: 'New Listing',
+        subHeader: 'New GEMs',
+        offer: 'Will be listed Everyday',
+        date: 'Launch Date: 00.00.0000 16:UTC +8',
+        image: GEM
+    },
+    {
+        header: 'Stake & Earn',
+        subHeader: '18% APR',
+        offer: 'Coming soon',
+        date: 'Launch Date: 00.00.0000 16:UTC +8',
+        image: APR
+    },
+    {
+        header: 'Launchpad',
+        subHeader: 'DEO',
+        offer: 'Discount Exchange Offer',
+        date: 'Launch Date: 00.00.0000 16:UTC +8',
+        image: DEO
+    },
+    {
+        header: 'Refer & Earn',
+        subHeader: 'Affiliate',
+        offer: 'Super Affiliate Program',
+        date: 'Launch Date: 00.00.0000 16:UTC +8',
+        image: RAE
+    }
+]
+
+export const FooterData = [
+    {
+        header: 'Corporate',
+        subHeader: ['About Us', 'Mission & Vision',
+            'Fees Structure',
+            'Proof of Reserve'],
+    },
+    {
+        header: 'Products',
+        subHeader: ['Spot Trading', 'Trade Mining', 'Discount Exchange Offer', 'Launch Pad', 'Affiliate Marketing'],
+    },
+    {
+        header: 'Service',
+        subHeader: ['Support Ticket', 'Contact Us', 'Live Chat', 'Scam Scanner'],
+    },
+    {
+        header: 'Business',
+        subHeader: ['Listing', 'Liquidity', 'Partnership', 'Investment'],
+    },
+    {
+        header: 'Legal',
+        subHeader: ['Terms & Conditions', 'Privacy Policy', 'Cookies', 'Digital Asset Disclosures'],
+    }
+]
+
+
 export const favoriteSpotData = {
 
 
@@ -83,7 +145,7 @@ export const favoriteSpotData = {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className="color-price-up">{row.hchange}</span></>
+            cell: (row) => <><span className="color-price-up">{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -114,7 +176,7 @@ export const favoriteSpotData = {
         {
             image: spotImg1,
             coinnamefirst: 'ADA',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.006640 / $2.35',
             hchange: '+7.27%',
             highandlow: '	0.006652 / 0.006168',
@@ -125,7 +187,7 @@ export const favoriteSpotData = {
         {
             image: spotImg2,
             coinnamefirst: 'BTC',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '42,564.39 / $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
@@ -136,7 +198,7 @@ export const favoriteSpotData = {
         {
             image: spotImg3,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.08686 / $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
@@ -147,7 +209,7 @@ export const favoriteSpotData = {
         {
             image: spotImg4,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.0018329 / $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
@@ -158,7 +220,7 @@ export const favoriteSpotData = {
         {
             image: spotImg5,
             coinnamefirst: 'ETH',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '2,918.14 / $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
@@ -169,7 +231,7 @@ export const favoriteSpotData = {
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '139.15 / $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
@@ -185,7 +247,7 @@ export const favoritefutureData = {
         {
             name: "NAME",
             selector: (row) => row.name,
-            cell: row => <> <i className="fa fa-star px-2 fa-lg text-warning" aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> <div style={{width:'100px'}}>{row.coinnamefirst}</div><span className="text-muted" style={{width:'100px'}}>/perpetual</span></>,
+            cell: row => <> <i className="fa fa-star px-2 fa-lg text-warning" aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> <div style={{ width: '100px' }}>{row.coinnamefirst}</div><span className="text-muted" style={{ width: '100px' }}>/perpetual</span></>,
             sortable: true,
             minWidth: "250px"
         },
@@ -201,7 +263,7 @@ export const favoritefutureData = {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className="color-price-up">{row.hchange}</span></>
+            cell: (row) => <><span className="color-price-up">{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -222,9 +284,9 @@ export const favoritefutureData = {
             name: "ACTION",
             selector: (row) => { },
             sortable: true,
-            cell: () =><div className="btn-group" role="group">
-            <span className="dtr-data"><a href="#!" title="" className="text-secondary px-1">Data History</a><a href="#!" title="" className="text-secondary">Trade</a></span>
-        </div>
+            cell: () => <div className="btn-group" role="group">
+                <span className="dtr-data"><a href="#!" title="" className="text-secondary px-1">Data History</a><a href="#!" title="" className="text-secondary">Trade</a></span>
+            </div>
         }
     ],
     rows: [
@@ -308,7 +370,7 @@ export const favoriteMarginData = {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className="color-price-up">{row.hchange}</span></>
+            cell: (row) => <><span className="color-price-up">{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -338,7 +400,7 @@ export const favoriteMarginData = {
         {
             image: spotImg4,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.0018329 / $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
@@ -349,7 +411,7 @@ export const favoriteMarginData = {
         {
             image: spotImg5,
             coinnamefirst: 'ETH',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '2,918.14 / $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
@@ -360,7 +422,7 @@ export const favoriteMarginData = {
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '139.15 / $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
@@ -388,13 +450,13 @@ export const soptMarkebnb = {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className={`${row.pricedown?"color-price-down":"color-price-up"}`}>{row.hchange}</span></>
+            cell: (row) => <><span className={`${row.pricedown ? "color-price-down" : "color-price-up"}`}>{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -425,9 +487,9 @@ export const soptMarkebnb = {
         {
             image: spotImg1,
             coinnamefirst: 'ADA',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+7.27%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
@@ -437,9 +499,9 @@ export const soptMarkebnb = {
         {
             image: spotImg5,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
@@ -449,9 +511,9 @@ export const soptMarkebnb = {
         {
             image: spotImg3,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -461,41 +523,41 @@ export const soptMarkebnb = {
         {
             image: spotImg4,
             coinnamefirst: 'MATIC',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.0018329 /',
-            dollerprice:' $0.64',
+            dollerprice: ' $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotBnb,
             coinnamefirst: 'CAKE',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '2,918.14 /',
-            dollerprice:'  $2,916.23',
+            dollerprice: '  $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Trade',
-            pricedown:true
+            pricedown: true
         },
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
     ]
 }
@@ -507,7 +569,7 @@ export const soptMarkeBTC = {
         {
             name: "NAME",
             selector: (row) => row.name,
-            cell: row => <> <i className={`fa fa-star px-2 fa-lg ${row.iconcolor?"text-warning":''}`} aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> {row.coinnamefirst}<span className="text-muted">/{row.coinnamesecond}</span></>,
+            cell: row => <> <i className={`fa fa-star px-2 fa-lg ${row.iconcolor ? "text-warning" : ''}`} aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> {row.coinnamefirst}<span className="text-muted">/{row.coinnamesecond}</span></>,
             sortable: true,
             minWidth: "150px",
         },
@@ -517,13 +579,13 @@ export const soptMarkeBTC = {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className={`${row.pricedown?"color-price-down":"color-price-up"}`}>{row.hchange}</span></>
+            cell: (row) => <><span className={`${row.pricedown ? "color-price-down" : "color-price-up"}`}>{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -554,36 +616,36 @@ export const soptMarkeBTC = {
         {
             image: spotImg1,
             coinnamefirst: 'ADA',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '-3.46%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
             marketcap: '	$75,260.60M',
             aciton: 'Trade',
-            greentext:true,
-            pricedown:true
+            greentext: true,
+            pricedown: true
         },
         {
             image: spotBnb,
             coinnamefirst: 'CAKE',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '2,918.14 / ',
-            dollerprice:'$2,916.23',
+            dollerprice: '$2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Trade',
         },
-       
+
         {
             image: spotImg3,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.08686 / ',
-            dollerprice:'$2.35',
+            dollerprice: '$2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -593,9 +655,9 @@ export const soptMarkeBTC = {
         {
             image: spotImg4,
             coinnamefirst: 'MATIC',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.0018329 /',
-            dollerprice:' $0.64',
+            dollerprice: ' $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
@@ -605,42 +667,42 @@ export const soptMarkeBTC = {
         {
             image: spotImg5,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
             marketcap: '	$801,182.25M',
             aciton: 'Trade',
-            greentext:true,
+            greentext: true,
         },
         {
             image: spotImg3,
             coinnamefirst: 'MATIC',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.0018329 /',
-            dollerprice:'  $0.64',
+            dollerprice: '  $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
-       
+
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
     ]
 }
@@ -662,13 +724,13 @@ export const soptMarketALTS = {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className={`${row.pricedown?"color-price-down":"color-price-up"}`}>{row.hchange}</span></>
+            cell: (row) => <><span className={`${row.pricedown ? "color-price-down" : "color-price-up"}`}>{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -699,9 +761,9 @@ export const soptMarketALTS = {
         {
             image: spotALTSBNB,
             coinnamefirst: 'ADA',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+7.27%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
@@ -711,48 +773,48 @@ export const soptMarketALTS = {
         {
             image: spotALTSBTT,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
             marketcap: '	$801,182.25M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotALTSCNX,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
             marketcap: '	$30,298.93M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotALTSHEGIC,
             coinnamefirst: 'MATIC',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '0.0018329 /',
-            dollerprice:' $0.64',
+            dollerprice: ' $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Trade',
-          
+
         },
         {
             image: spotALTSTRX,
             coinnamefirst: 'CAKE',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '2,918.14 /',
-            dollerprice:'  $2,916.23',
+            dollerprice: '  $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
@@ -762,27 +824,27 @@ export const soptMarketALTS = {
         {
             image: spotALTSWIN,
             coinnamefirst: 'SOL',
-            coinnamesecond:'BNB',
+            coinnamesecond: 'BNB',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            greentext:true,
+            greentext: true,
         },
     ]
 }
 
-export const soptMarketFAIT= {
+export const soptMarketFAIT = {
 
 
     columns: [
         {
             name: "NAME",
             selector: (row) => row.name,
-            cell: row => <> <i className={`fa fa-star px-2 fa-lg ${row.iconcolor?"text-warning":''}`} aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> {row.coinnamefirst}<span className="text-muted">/{row.coinnamesecond}</span></>,
+            cell: row => <> <i className={`fa fa-star px-2 fa-lg ${row.iconcolor ? "text-warning" : ''}`} aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> {row.coinnamefirst}<span className="text-muted">/{row.coinnamesecond}</span></>,
             sortable: true,
             minWidth: "150px",
         },
@@ -792,13 +854,13 @@ export const soptMarketFAIT= {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className={`${row.pricedown?"color-price-down":"color-price-up"}`}>{row.hchange}</span></>
+            cell: (row) => <><span className={`${row.pricedown ? "color-price-down" : "color-price-up"}`}>{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -829,63 +891,63 @@ export const soptMarketFAIT= {
         {
             image: spotImg1,
             coinnamefirst: 'ADA',
-            coinnamesecond:'BTC',
+            coinnamesecond: 'BTC',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '-3.46%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
             marketcap: '	$75,260.60M',
             aciton: 'Trade',
-            greentext:true,
-            pricedown:true
+            greentext: true,
+            pricedown: true
         },
         {
             image: spotImg1,
             coinnamefirst: 'ADA',
-            coinnamesecond:'GBP',
+            coinnamesecond: 'GBP',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+0.27%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
             marketcap: '	$75,260.60M',
             aciton: 'Trade',
-            greentext:true,
-            pricedown:true
+            greentext: true,
+            pricedown: true
         },
         {
             image: spotBnb,
             coinnamefirst: 'CAKE',
-            coinnamesecond:'BTC',
+            coinnamesecond: 'BTC',
             price: '2,918.14 /',
-            dollerprice:'  $2,916.23',
+            dollerprice: '  $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Trade',
-          
+
         },
         {
             image: CELR,
             coinnamefirst: 'CELR',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
             marketcap: '	$801,182.25M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotImg3,
             coinnamefirst: 'COTI',
-            coinnamesecond:'BTC',
+            coinnamesecond: 'BTC',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -895,9 +957,9 @@ export const soptMarketFAIT= {
         {
             image: spotImg3,
             coinnamefirst: 'COTI',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -907,70 +969,70 @@ export const soptMarketFAIT= {
         {
             image: spotImg2,
             coinnamefirst: 'DOT',
-            coinnamesecond:'BTC',
+            coinnamesecond: 'BTC',
             price: '0.0018329 /',
-            dollerprice:' $0.64',
+            dollerprice: ' $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Trade',
-          
+
         },
-       
+
         {
             image: spotImg4,
             coinnamefirst: 'ETH',
-            coinnamesecond:'BTC',
+            coinnamesecond: 'BTC',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            iconcolor:true,
-            greentext:true,
+            iconcolor: true,
+            greentext: true,
         },
         {
             image: spotImg4,
             coinnamefirst: 'ETH',
-            coinnamesecond:'EUR',
+            coinnamesecond: 'EUR',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            iconcolor:true,
-            greentext:true,
+            iconcolor: true,
+            greentext: true,
         },
         {
             image: spotImg4,
             coinnamefirst: 'ETH',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            iconcolor:true,
-            greentext:true,
+            iconcolor: true,
+            greentext: true,
         },
     ]
 }
 
-export const soptMarketETF= {
+export const soptMarketETF = {
 
 
     columns: [
         {
             name: "NAME",
             selector: (row) => row.name,
-            cell: row => <> <i className={`fa fa-star px-2 fa-lg ${row.iconcolor?"text-warning":''}`} aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> {row.coinnamefirst}<span className="text-muted">/{row.coinnamesecond}</span></>,
+            cell: row => <> <i className={`fa fa-star px-2 fa-lg ${row.iconcolor ? "text-warning" : ''}`} aria-hidden="true"></i> <img src={row.image} alt="" className="img-fluid avatar mx-1" /> {row.coinnamefirst}<span className="text-muted">/{row.coinnamesecond}</span></>,
             sortable: true,
             minWidth: "250px",
         },
@@ -980,13 +1042,13 @@ export const soptMarketETF= {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className={`${row.pricedown?"color-price-down":"color-price-up"}`}>{row.hchange}</span></>
+            cell: (row) => <><span className={`${row.pricedown ? "color-price-down" : "color-price-up"}`}>{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -1017,50 +1079,50 @@ export const soptMarketETF= {
         {
             image: spotImg1,
             coinnamefirst: 'ADADOWN',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '-3.46%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
             marketcap: '	$75,260.60M',
             aciton: 'Trade',
-            greentext:true,
-            pricedown:true
+            greentext: true,
+            pricedown: true
         },
         {
             image: spotBnb,
             coinnamefirst: 'CAKE',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '2,918.14 /',
-            dollerprice:'  $2,916.23',
+            dollerprice: '  $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Trade',
-          
+
         },
-       
+
         {
             image: CELR,
             coinnamefirst: 'CELR',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
             marketcap: '	$801,182.25M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotImg3,
             coinnamefirst: 'COTI',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -1070,68 +1132,68 @@ export const soptMarketETF= {
         {
             image: spotImg2,
             coinnamefirst: 'COTI',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
             marketcap: '	$30,298.93M',
             aciton: 'Trade',
-           
+
         },
         {
             image: spotImg4,
             coinnamefirst: 'ETH',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            iconcolor:true,
-            greentext:true,
+            iconcolor: true,
+            greentext: true,
         },
         {
             image: Magic,
             coinnamefirst: 'ETH',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '0.00315 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
         {
             image: USDT,
             coinnamefirst: 'SOL',
-            coinnamesecond:'USDT',
+            coinnamesecond: 'USDT',
             price: '72.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Trade',
-            redtext:true
+            redtext: true
         },
 
     ]
@@ -1154,13 +1216,13 @@ export const feutureMarketUSD = {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className="color-price-up">{row.hchange}</span></>
+            cell: (row) => <><span className="color-price-up">{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -1192,19 +1254,19 @@ export const feutureMarketUSD = {
             image: spotImg1,
             coinnamefirst: 'ADA',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+7.27%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
             marketcap: '	$75,260.60M',
             aciton: 'Data HistoryTrade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotImg2,
             coinnamefirst: 'BTC',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
@@ -1215,7 +1277,7 @@ export const feutureMarketUSD = {
             image: spotImg3,
             coinnamefirst: 'COTI',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -1226,7 +1288,7 @@ export const feutureMarketUSD = {
             image: spotImg4,
             coinnamefirst: 'COTI',
             price: '0.0018329 /',
-            dollerprice:' $0.64',
+            dollerprice: ' $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
@@ -1237,25 +1299,25 @@ export const feutureMarketUSD = {
             image: spotImg5,
             coinnamefirst: 'ETH',
             price: '2,918.14 /',
-            dollerprice:' $2,916.23',
+            dollerprice: ' $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Data HistoryTrade',
-            greentext:true,
+            greentext: true,
         },
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Data HistoryTrade',
-            redtext:true
+            redtext: true
         },
     ]
 }
@@ -1277,13 +1339,13 @@ export const feutureMarketCOIN = {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className="color-price-up">{row.hchange}</span></>
+            cell: (row) => <><span className="color-price-up">{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -1315,19 +1377,19 @@ export const feutureMarketCOIN = {
             image: spotImg1,
             coinnamefirst: 'ADA',
             price: '0.006640 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+7.27%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
             marketcap: '	$75,260.60M',
             aciton: 'Data HistoryTrade',
-            redtext:true
+            redtext: true
         },
         {
             image: spotImg2,
             coinnamefirst: 'BTC',
             price: '42,564.39 /',
-            dollerprice:' $42,350.69',
+            dollerprice: ' $42,350.69',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
@@ -1338,7 +1400,7 @@ export const feutureMarketCOIN = {
             image: spotImg3,
             coinnamefirst: 'COTI',
             price: '0.08686 /',
-            dollerprice:' $2.35',
+            dollerprice: ' $2.35',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -1349,7 +1411,7 @@ export const feutureMarketCOIN = {
             image: spotImg4,
             coinnamefirst: 'COTI',
             price: '0.0018329 /',
-            dollerprice:' $0.64',
+            dollerprice: ' $0.64',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
@@ -1360,25 +1422,25 @@ export const feutureMarketCOIN = {
             image: spotImg5,
             coinnamefirst: 'ETH',
             price: '2,918.14 /',
-            dollerprice:' $2,916.23',
+            dollerprice: ' $2,916.23',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Data HistoryTrade',
-            greentext:true,
+            greentext: true,
         },
         {
             image: spotImg6,
             coinnamefirst: 'SOL',
             price: '139.15 /',
-            dollerprice:' $139.22',
+            dollerprice: ' $139.22',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
             marketcap: '	$743958.07M',
             aciton: 'Data HistoryTrade',
-            redtext:true
+            redtext: true
         },
     ]
 }
@@ -1406,7 +1468,7 @@ export const newListing = {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className="color-price-up">{row.hchange}</span></>
+            cell: (row) => <><span className="color-price-up">{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -1458,13 +1520,13 @@ export const AllCripto = {
             sortable: true,
             maxWidth: '50px',
             minWidth: "150px",
-            cell: (row) => <a href="#!" className={` ${row.redtext?"text-danger":row.greentext?"text-success":''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
+            cell: (row) => <a href="#!" className={` ${row.redtext ? "text-danger" : row.greentext ? "text-success" : ''}`}>{row.price}<span className="text-muted">{row.dollerprice}</span></a>
         },
         {
             name: "24H CHANGE",
             selector: (row) => row.hchange,
             sortable: true,
-            cell:(row)=><><span className={`${row.pricedown?"color-price-down":"color-price-up"}`}>{row.hchange}</span></>
+            cell: (row) => <><span className={`${row.pricedown ? "color-price-down" : "color-price-up"}`}>{row.hchange}</span></>
         },
         {
             name: "24H HIGH/24H LOW",
@@ -1495,8 +1557,8 @@ export const AllCripto = {
         {
             image: spotImg1,
             coinnamefirst: 'ADA',
-            coinnamesecond:'Cardano',
-            dollerprice:' $2.25',
+            coinnamesecond: 'Cardano',
+            dollerprice: ' $2.25',
             hchange: '-3.46%',
             highandlow: '	0.006652 / 0.006168',
             volume: '26,781.66',
@@ -1506,20 +1568,20 @@ export const AllCripto = {
         {
             image: ADX,
             coinnamefirst: 'ADX',
-            coinnamesecond:'Adex',
-            dollerprice:'	$0.46',
+            coinnamesecond: 'Adex',
+            dollerprice: '	$0.46',
             hchange: '+4.03%',
             highandlow: '2,979.99 / 2,733.00',
             volume: '	2,079.60M',
             marketcap: '$342,735.73M',
             aciton: 'Detail Trade',
         },
-       
+
         {
             image: ARDR,
             coinnamefirst: 'ARDR',
-            coinnamesecond:'Ardor',
-            dollerprice:'$0.28',
+            coinnamesecond: 'Ardor',
+            dollerprice: '$0.28',
             hchange: '+3.45%',
             highandlow: '	0.09024 / 0.08345',
             volume: '	36,883.46',
@@ -1529,20 +1591,20 @@ export const AllCripto = {
         {
             image: ARK,
             coinnamefirst: 'ARK',
-            coinnamesecond:'Ark',
-            dollerprice:' $1.51',
+            coinnamesecond: 'Ark',
+            dollerprice: ' $1.51',
             hchange: '-1.97%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Detail Trade',
-            pricedown:true
+            pricedown: true
         },
         {
             image: BAT,
             coinnamefirst: 'BAT',
-            coinnamesecond:'Attention Token',
-            dollerprice:'$0.65',
+            coinnamesecond: 'Attention Token',
+            dollerprice: '$0.65',
             hchange: '+1.12%',
             highandlow: '43,200.00 / 40,675.00',
             volume: '	2,603.11M',
@@ -1552,20 +1614,20 @@ export const AllCripto = {
         {
             image: BCH,
             coinnamefirst: 'BCH',
-            coinnamesecond:'Bitcoin Cash',
-            dollerprice:' $511.30',
+            coinnamesecond: 'Bitcoin Cash',
+            dollerprice: ' $511.30',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Detail Trade',
         },
-       
+
         {
             image: BNB,
             coinnamefirst: 'BNB',
-            coinnamesecond:'BNB',
-            dollerprice:'	$355.80',
+            coinnamesecond: 'BNB',
+            dollerprice: '	$355.80',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
@@ -1575,21 +1637,21 @@ export const AllCripto = {
         {
             image: BNT,
             coinnamefirst: 'BNT',
-            coinnamesecond:'Bancor',
-            dollerprice:'	$3.60',
+            coinnamesecond: 'Bancor',
+            dollerprice: '	$3.60',
             hchange: '+28.33%',
             highandlow: '	0.0018867 / 0.0013722',
             volume: '	17,935.33',
             marketcap: '	$563.54M',
             aciton: 'Detail Trade',
-            redtext:true
+            redtext: true
         },
-       
+
         {
             image: BTC,
             coinnamefirst: 'BTC',
-            coinnamesecond:'Bitcoin',
-            dollerprice:' 	$44,090.69',
+            coinnamesecond: 'Bitcoin',
+            dollerprice: ' 	$44,090.69',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',
@@ -1599,8 +1661,8 @@ export const AllCripto = {
         {
             image: CELR,
             coinnamefirst: 'CVC',
-            coinnamesecond:'Civic',
-            dollerprice:'$0.43',
+            coinnamesecond: 'Civic',
+            dollerprice: '$0.43',
             hchange: '+5.83%',
             highandlow: '144.22 / 128.15',
             volume: '	743.07M',

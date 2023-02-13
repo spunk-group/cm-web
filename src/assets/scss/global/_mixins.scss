@@ -28,13 +28,13 @@
 }
 //*******Custome Scroll*******/
 @mixin c_overflow($scroll) {  
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;  // IE 10+
-    scrollbar-width: none; // Firefox
+    // overflow-y: auto;
+    // scroll-behavior: smooth;
+    // -ms-overflow-style: none;  // IE 10+
+    // scrollbar-width: none; // Firefox
 
     &::-webkit-scrollbar {
-        width: 4px;
+        width: 10px;
     }
     &:hover {
         &::-webkit-scrollbar-thumb{

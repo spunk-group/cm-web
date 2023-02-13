@@ -1,7 +1,7 @@
 import React from "react";
 
 function TopSmallCard(props) {
-    const{header,coin,color,rate,doller,percentag}=props;
+    const { header, coin, color, rate, doller, percentag } = props;
     return (
         <div className="col">
             <div className="card">
